@@ -3,8 +3,8 @@ import axios from 'axios';
 import { SIGNUP_SUCCESS, SIGNUP_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, GETME_FAIL, GETME_SUCCESS, LOGOUT_SUCCESS }
     from './../constants/actionTypes'
 
-const baseUrl = 'http://192.168.10.10:4040';
-// syedmujtaba_31@outlook.com 1234567xyz 
+const baseUrl = 'https://glacial-sierra-44270.herokuapp.com';
+
 
 
 export function _Signup(body) {

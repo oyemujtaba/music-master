@@ -8,7 +8,11 @@ import { _getMe } from './actions';
 class App extends Component {
 
     componentWillMount() {
-        this.props.actions._getMe()
+        const jwt = localStorage.getItem('jwt');
+        if(jwt){
+            this.props.actions._getMe()
+        }
+        // this.props.actions._getMe()
     }
 
     render() {
@@ -26,6 +30,11 @@ class App extends Component {
                                 path={route.path}
                                 exact={route.exact}
                                 render={() => {
+                                    if(route.path===''){
+                                        return <Redirect to={{
+                                            pathname: '/login'
+                                        }} />
+                                    }
                                     if (route.private && isLogin()) {
                                         return route.component();
                                     } else if (route.private && !isLogin()) {

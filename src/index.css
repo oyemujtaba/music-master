@@ -70,8 +70,11 @@ body {
   opacity: 0.8;
 }
 .bg_img{
-  background-image: url('./assets/12IYH1n-hd-guitar-wallpaper.jpg');
-  max-width: 100%;
+  background-image: url('./assets/woofer-1885354_960_720.png');
+  /* max-width: 100%; */
+  /* background-repeat: no-repeat;
+  background-attachment: fixed */
+  background-size:cover;
 }
 
 /* ANIMATE */
